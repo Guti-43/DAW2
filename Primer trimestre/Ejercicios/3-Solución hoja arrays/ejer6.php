@@ -33,6 +33,7 @@
                             <td><?= isset($producto['precio']) ? $producto['precio'] : 'Precio no disponible' ?></td>
                         </tr>
                     <?php endforeach; ?>
+                    
                 </tbody>
             </table>
         <?php
