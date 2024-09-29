@@ -1,0 +1,68 @@
+body{
+    background-color: burlywood;
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.cuerpo{
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+form{    
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+form label{
+    width: 100%;
+    margin: 1rem auto;
+}
+
+form input, form select{
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button{
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.errores{
+    background-color: black;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.errores p{
+    color: red;
+    padding: 20px;
+}
+
+.resultado{
+    padding-top: 20px;
+}
+
+.resultado table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+.resultado table tr, th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.resultado table tr td:nth-child(1){
+    background-color: rgb(226, 226, 226);
+}
