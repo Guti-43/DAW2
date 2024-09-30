@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Subir ficheros</title>
+</head>
+
+<body>
+    <!-- El usuario elige dos archivos llamados galleta.png y calamar.png -->
+    <h2>Subir varios archivos</h2>
+    <form action="subir.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="MAX_FILE_SIZE" value="10097152"> <!-- 9MB en bytes -->
+        <label for="archivo">Selecciona archivos:</label>
+        <input type="file" name="nombreCampo[]" id="archivo" accept="img/*" multiple>
+        <input type="submit" value="Subir archivo">
+    </form>
+
+</body>
+
+</html>
