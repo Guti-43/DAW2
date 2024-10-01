@@ -5,7 +5,7 @@ $erroresMostrar = '';
 $tiposMimePermitidos = ['image/gif', 'image/jpeg', 'image/png', 'image/bmp', 'image/webp'];
 
 // Validar nombre del evento
-if (empty($_POST['nombre_evento'])) {
+if (empty($_POST['nombre'])) {
     $errores[] = "El nombre del evento es obligatorio.";
 }
 
@@ -25,10 +25,10 @@ if (!isset($_POST['deportes']) || empty($_POST['deportes'])) {
 }
 
 // Validar archivo
-if (!isset($_FILES['nombreCampo']) || $_FILES['nombreCampo']['error'] != UPLOAD_ERR_OK) {
+if (!isset($_FILES['archivo']) || $_FILES['archivo']['error'] != UPLOAD_ERR_OK) {
     $errores[] = "Debe seleccionar un archivo.";
 } else {
-    $archivoTemporal = $_FILES['nombreCampo']['tmp_name'];
+    $archivoTemporal = $_FILES['archivo']['tmp_name'];
     $tipoMime = mime_content_type($archivoTemporal);
     $tamaño = filesize($archivoTemporal);
     if (!in_array($tipoMime, $tiposMimePermitidos)) {
@@ -66,13 +66,13 @@ if (empty($errores)) {
 
     $fecha = htmlspecialchars($_POST['fecha'], ENT_QUOTES, 'UTF-8');
     $deportes = $_POST['deportes'];
-    $nombre_evento = $_POST['nombre_evento'];
+    $nombre_evento = $_POST['archivo'];
     $ubicacion = $_POST['ubicacion'];
 
     // Procesar el archivo
-    $nombreArchivo = $_FILES['nombreCampo']['name'];
+    $nombreArchivo = $_FILES['archivo']['name'];
     $rutaArchivo = 'imagenes/' . $nombreArchivo;
 
-    move_uploaded_file($_FILES['nombreCampo']['tmp_name'], $rutaArchivo);
-    include('ficha.php');
+    move_uploaded_file($_FILES['archivo']['tmp_name'], $rutaArchivo);
+    include('ficha1.php');
 }

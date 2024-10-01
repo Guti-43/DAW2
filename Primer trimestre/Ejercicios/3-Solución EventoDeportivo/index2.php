@@ -10,7 +10,7 @@
 <body>
     <h1>Formulario de Evento Deportivo</h1>
     <br>
-    <form action="procesar.php" method="post" enctype="multipart/form-data">
+    <form action="procesar2.php" method="post" enctype="multipart/form-data">
         <label for="nombre_evento">Nombre del Evento:</label>
         <input type="text" id="nombre_evento" name="nombre_evento">
         <br>
