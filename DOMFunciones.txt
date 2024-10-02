@@ -1,0 +1,126 @@
+Node
+	- nodeName  devuelve el tipo de nodo (#text, #comment, #document...)
+		Si el nodo es tipo elemento, nodeName devuelve en mayúsculas
+
+	- nodeValue devuelve el valor de un nodo
+		Si el nodo es tipo elemento devuelve null
+
+	- appendChild( agrega al nodo otro nodo como un nodo hijo
+
+
+
+	NodeList
+		Similar a array de JS. Tiene .length
+		
+		- NodeList.item( Devuelve un elemento por el índice.
+			Si el índice no existe devuelve null
+		
+		- NodeList.entries() Devuelve un iterador que pone indices desde 0
+			const iterador = array.entries();
+			for (let [indice, nodo] of iterador) {
+				console.log(`Índice: ${indice}, Nodo: ${nodo.textContent}`);
+			}
+
+		- NodeList.forEach() Iterador para recorrer listas de nodos (Igual que arrays)
+
+		- NodeList.keys() Devuelve un iterador pero solo de claves (indices)
+			const iterador = nodeList.keys();
+			for (let clave of iterador) {
+				console.log(`Índice: ${clave}`);
+			}
+
+		- NodeList.values() Devuelve un iterador pero solo de valores
+			const iterador = nodeList.values();
+			for (let nodo of iterador) {
+				console.log(`Contenido del nodo: ${nodo.textContent}`);
+			}
+
+
+
+	DOMTokenList
+		Lista de tokens (palabras) separados por espacios
+		Distingue entre Mayusc y Minusc
+		Tiene .length y .value
+
+
+
+	NamedNodeMap
+		Colección e objetos Attr para acceder y modificar atributos en DOM
+		Los objetos dentro no tienen orden
+		Tiene .length y métodos como:
+			getNamedItem(), getNamedItemNS(), setNamedItem(), setNamedItemNS(), removeNamedItem(), removeNamedItem(), removeNamedItemNS() e item()
+		No se suele utilizar
+
+
+
+HTMLCollection
+	Parecido a array de JS
+	Colección (de tipo nodo) ordenada por aparición en documento
+		const elemento=document.all;
+		console.log(elemento.item(4)); == console.log(elemento[4]);
+
+
+
+Document
+	Con el se accede a todo el documento
+	- document.head  Devuelve el elemento head del DOM (<head>)
+	
+	- document.domain  Devuelve el dominio de la pagina web
+
+	- document.body  Devuelve el elemento body del DOM (<body>)
+
+	- document.form  Devuelve los elementos form del DOM (<form>) en un HTMLCollection
+
+	- document.links  Devuelve un HTMLCollection con los enlaces del documento
+	
+	- document.images  Devuelve un HTMLCollection con las imágenes del documento
+
+	- document.scripts devuelve un HTMLCollection con los scripts presentes en el documento
+
+	El objeto Window representa la ventana que contiene un documento DOM y proporciona una interfaz con funciones, objetos y constructores no 				necesariamente vinculados a la ventana de la interfaz de usuario
+		Se puede obtener una referencia a este objeto mediante la propiedad document.defaultView
+			const objWindow= document.defaultView;
+			console.log(objWindow);
+
+
+
+Window
+	Accesible directamente para JS mediante window (console.log(window.document);
+	Tiene la propiedad name ara obtener o cambiar nombre de la ventana
+
+	- window.open("link")  Abre el link en una pestaña nueva
+
+	- navigator  Da mucha info.
+		console.log(window.navigator.language);
+
+
+
+Document metodos
+
+	- getElementsByName()  Devuelve NodeList con elementos del nombre del argumento
+		const elementos = document.getElementsByName('viewport');
+
+	- getElementsByTagName()  Devuelve un HTMLCollection con elemento de etuqueta la del argumento
+		const elementos = document.getElementsByTagName('p')
+
+	- getElemetsByClassName()  Devuelve un HTMLCollection con elementos de clase la del argumento
+		const elementos = document.getElementsByClassName('cabecera')
+		Puede introducirse mas de 1 clase en el argumento
+
+	- getElementsById()  Devuelve una referencia a un elemento del DOM
+		const elemento = document.getElementById('Profesor')
+		Devuelve el primer elemento que exista y sus hijos
+
+	- querySelector()  Mas utilizado
+		En el argumento va un selector (misma sintaxis que css)
+			const elemento = document.querySelector('#profesor')
+		En el siguiente ejemplo se selecciona el primer elemento que tenga la clase cabecera
+			y que cumpla que es hijo de un elemento con Id Contenidos
+			const elemento = document.querySelector('#Contenidos >.cabecera')
+		Primer elemento de la cabecera que tenga un atributo charset
+			const elemento = document.querySelector('head [charset]')
+		Dos clases a la vez
+			const elemento = document.querySelector('.descargas.cursiva')
+
+
+
