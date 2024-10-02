@@ -1,0 +1,174 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #3e8e41;
+}
+
+label {
+    margin-bottom: 10px;
+    display: inline-block;
+    min-width: 23%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    padding: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 70%;
+    height: 3vh;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grupo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Estilos para los botones */
+input[type="submit"] {
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 4vh auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+
+/* Estilos para fieldset */
+fieldset {
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#operaciones {
+    width: 92%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+legend {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    color: #3e8e41;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #3e8e41;
+}
+
+/* Contenedor principal que agrupa el formulario y el div de resultados */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 87vw;
+    margin: 3vh auto;
+    height: 95vh;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+    width: 55%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Estilo para el contenedor de resultados */
+.results-container {
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para la tabla de resultados */
+.results-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results-container th,
+.results-container td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    text-align: left;
+}
+
+.results-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.results-container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.imagen-producto {
+    width: 100%;
+    max-height: 50vh;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.results-container .error {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+.results-container .errorRed {
+    background-color: red;
+    color: white;
+}
