@@ -139,11 +139,43 @@ Document metodos
 
 
 
+Cambiar atributos de elementos	
+	Con los anteriores selectores pueden cambiarse los atributos
+		const imagen = document.querySelector('.licencia img');
+		imagen.src='https://www.educa.jcyl.es/es/banners/202569-logo-jcyl.gif';
 
 
 
+	- innerText  Contenido de texto "formateado"
+		Tiene en cuenta el CSS
+			const elemento = document.querySelector('h2');
+			console.log(elemento.innerText);
+		Puede modificar contenido de texto
+			const elemento = document.querySelector('h2');
+			elemento.innerText='Hola';
+		Si visivility: hidden; no muestra el texto
+
+	- textContent  Propiedad de Node. Contenido de texto de nodo y descendientes
+		No tiene en cuenta el CSS
+			const elemento = document.querySelector('h2');
+			elemento.textContent="     HOLA";
+			console.log(elemento.textContent);   --> '     HOLA'
+			console.log(elemento.innerText);     --> 'HOLA'
+
+	- innerHTML  Contenido de texto incluidas las etiquetas HTML
+		Tambien puede modificar contenido
+			const elemento = document.querySelector('h2');
+			elemento.innerHTML='<a href="pago.html">100 &yen;</a>';
 
 
+
+Style
+	Puede cambiar el estilo de un elemento de forma dinámica
+		const elemento= document.querySelector('h2');
+		elemento.style.backgroundColor="red";
+	contiene también el atributo cssText que permite asignar varias propiedades CSS al mismo tiempo
+		elemento.style.cssText = 'background-color: black; color: white;';
+	
 
 
 
