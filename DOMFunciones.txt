@@ -121,6 +121,32 @@ Document metodos
 			const elemento = document.querySelector('head [charset]')
 		Dos clases a la vez
 			const elemento = document.querySelector('.descargas.cursiva')
+		Primer elemento que sea un <a> y que tenga un atributo href cuyo valor contenga Profesor
+			y que cumpla que es hijo de un elemento con <li>
+			const elemento = document.querySelector('li a[href*="Profesor"]')
+		Puede usarse :nth-child()
+			const elemento = document.querySelector('#Profesor p:nth-child(3)')
+
+	- querySelectorAll
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
