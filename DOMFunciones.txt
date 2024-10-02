@@ -98,20 +98,24 @@ Window
 Document metodos
 
 	- getElementsByName()  Devuelve NodeList con elementos del nombre del argumento
-		const elementos = document.getElementsByName('viewport');
+		Si no hay elementos lo devuelve vacio
+			const elementos = document.getElementsByName('viewport');
 
 	- getElementsByTagName()  Devuelve un HTMLCollection con elemento de etuqueta la del argumento
-		const elementos = document.getElementsByTagName('p')
+		Si no hay elementos lo devuelve vacio
+			const elementos = document.getElementsByTagName('p')
 
 	- getElemetsByClassName()  Devuelve un HTMLCollection con elementos de clase la del argumento
 		const elementos = document.getElementsByClassName('cabecera')
 		Puede introducirse mas de 1 clase en el argumento
 
 	- getElementsById()  Devuelve una referencia a un elemento del DOM
+		Si no hay elementos devuelve null
 		const elemento = document.getElementById('Profesor')
 		Devuelve el primer elemento que exista y sus hijos
 
 	- querySelector()  Mas utilizado
+		Si no hay elementos devuelve null
 		En el argumento va un selector (misma sintaxis que css)
 			const elemento = document.querySelector('#profesor')
 		En el siguiente ejemplo se selecciona el primer elemento que tenga la clase cabecera
@@ -127,9 +131,11 @@ Document metodos
 		Puede usarse :nth-child()
 			const elemento = document.querySelector('#Profesor p:nth-child(3)')
 
-	- querySelectorAll
-
-
+	- querySelectorAll()  Selecciona todos los elementos del DOM que cumplan con el selector
+		Devuelve un NodeList. Si no hay elementos lo devuelve vacio
+			const elementos = document.querySelectorAll('a')
+		Elementos que tenga la clase cabecera y que cumpla que son hijos de un elemento <section>
+			const elementos = document.querySelectorAll('section .cabecera')
 
 
 
