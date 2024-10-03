@@ -176,6 +176,97 @@ Style
 	contiene también el atributo cssText que permite asignar varias propiedades CSS al mismo tiempo
 		elemento.style.cssText = 'background-color: black; color: white;';
 	
+	- className  Da el nombre de la clase de un elemento
+		Tambien puede cambiar la calse del elemento
+			const elemento= document.querySelector('h2');
+			console.log(elemento.className);
+			elemento.className='licencia';
+			console.log(elemento.className);
+	
+	- classList  Devuelve un DOMTokenList de solo lectura con las clases de un elemento
+		const elemento= document.querySelector('h2');
+		console.log(elemento.classList);
+
+		- .add()  Permite añadir una o varias clases a un elemento
+			elemento.classList.add('licencia','cursiva', 'negrita');
+
+		- .toggle()  Permite añadir/quitar una clase si esta/no esta
+			elemento.classList.add('licencia');
+
+		- .contains()  Devuelve true/false si contiene o no un elemento una clase
+			console.log(elemento.classList.contains('licencia'));
+
+		- .remove()  Elimina clases pasadas como argumento
+			elemento.classList.remove('text-center');
+
+
+	styleSheets
+		Da las propiedades de estilo de la pagina
+		Devuelve un array de tipo StyleSheetList con las hojas de estilo
+		Tambien sirve para modificar
+		Cada elemento del array contiene otros elementos como cssRules que son los selectores del estilo.
+
+		const estilo=document.styleSheets[1];
+		estilo.cssRules[4].style.backgroundColor="blue";
+
+		- setAttribute  Establece el valor de un atributo en el elemento
+			El primer argumento cambia el nombre del atributo y el segundo el valor
+				elemento.setAttribute("id","NombreProfesor");
+
+		- getAttribute  Devuelve el valor de un atributo pasado como argumento
+			elemento.setAttribute("id","NombreProfesor");
+			console.log(elemento.getAttribute("id"));   --> NombreProfesor
+	
+		- removeAttribute  Elimina el atributo pasado
+			elemento.setAttribute("id","NombreProfesor");
+			console.log(elemento.getAttribute("id"));
+			elemento.removeAttribute("id");		    --> NombreProfesor
+			console.log(elemento.getAttribute("id"));   --> null
+
+
+
+	traversing
+		Para recorrer el arbol DOM desde un elemento seleccionado (jQuery)
+
+		- clossest()  Busca el padre mas cercano con el selector pasado
+			<main>
+ 				<section id="Profesor">
+ 					<p class="cabecera">Profesor</p>
+ 					<p>Me llamo Jorge García Flores,...
+
+			const elemento = document.querySelector("#Profesor .cabecera");
+			console.log(elemento.closest("main"));   --> <main> ... </main>
+	
+		- childNodes  Devuelve un NodeList con los hijos de un elemento
+			Cuenta las etiquetas del código como elemento
+			Al ser un array puede acceder a un elemento en concreto
+				const elemento= document.querySelector('ul');
+				const hijo= elemento.childNodes[1];
+
+		- children  De solo lectura devuelve un HTMLCollection con todos los hijos
+			de un elemento
+				const elemento= document.querySelector('ul');
+				const hijo= elemento.children[0];
+
+		- parentNode  Solo lectura contiene nodo padre de un elemento
+			const elemento= document.querySelector('h1');
+			console.log(elemento.parentNode);
+
+		- parentElement  Solo lectura contiene elemento padre de un elemento
+			const elemento= document.querySelector('h1');
+			console.log(elemento. parentElement);
+
+		- nextElementSibling  Solo lectura devuelve elemento después del mismo
+			console.log(elemento.nextElementSibling);
+
+		- previousElementSibling  Solo lectura devuelve elemento anterior o null
+			console.log(elemento.previousElementSibling);
+
+		- firstElementChild  Solo lectura accede primer elemento hijo de un elemento
+			console.log(elemento.firstElementChild);
+
+		- lastElementChild  Solo lectura accede ultimo elemento hijo de un elemento
+			console.log(elemento.lastElementChild);
 
 
 
