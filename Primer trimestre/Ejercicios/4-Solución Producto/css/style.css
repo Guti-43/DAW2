@@ -1,0 +1,181 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #3e8e41;
+}
+
+label {
+    margin-bottom: 10px;
+    display: inline-block;
+    min-width: 23%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    padding: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 70%;
+    height: 4vh;
+    padding: 0.2vw 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.grupo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4vh;
+}
+
+/* Estilos para los botones */
+input[type="submit"] {
+    width: 20vw;
+    height: 4vh;
+    padding: 1vh;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 3vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+
+/* Estilos para fieldset */
+fieldset {
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1vw;
+    margin-bottom: 1vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#operaciones {
+    width: 92%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+legend {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    color: #3e8e41;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #3e8e41;
+}
+
+/* Contenedor principal que agrupa el formulario y el div de resultados */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 95vw;
+    margin: 2vh auto;
+    height: 95vh;
+    max-height: 95vh;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+    width: 50%;
+    padding: 1.2vw;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Estilo para el contenedor de resultados */
+.results-container {
+    width: 50%;
+    padding: 1vh 1.5vw;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para la tabla de resultados */
+.results-container table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.results-container th,
+.results-container td {
+    border: 1px solid #ddd;
+    padding: 8px 1vw;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+td {
+    text-align: left;
+}
+
+.results-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.results-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.imagen-producto {
+    height: auto;
+    max-height: 53vh;
+    border-radius: 5px;
+}
+
+.results-container .error {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+.results-container .errorRed {
+    background-color: red;
+    color: white;
+}
