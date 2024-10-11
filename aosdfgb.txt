@@ -1,0 +1,68 @@
+public function subirImagenPerfil($nombreUsuario){
+        $errores = [];
+
+        define("MAX_TAMANYO", 3145728);
+        $imagen = $_FILES['imagen'];
+        $tiposMimePermitidos = ['image/png'];
+
+        switch ($imagen['error']) {
+            case UPLOAD_ERR_OK:
+                $archivoTemporal = $imagen['tmp_name'];
+                $tipoMime = mime_content_type($archivoTemporal);
+                $tamano = filesize($archivoTemporal);
+    
+                if (!in_array($tipoMime, $tiposMimePermitidos)) {
+                    $errores[] = "El archivo debe ser una imagen GIF, JPEG, PNG, BMP o WEBP.";
+                }
+    
+                if ($tamano > MAX_TAMANYO) {
+                    $errores[] = "El archivo no debe superar los 3MB.";
+                }
+                break;
+    
+            case UPLOAD_ERR_INI_SIZE:
+            case UPLOAD_ERR_FORM_SIZE:
+                $errores[] = "El archivo excede el tamaño máximo permitido.";
+                break;
+    
+            case UPLOAD_ERR_PARTIAL:
+                $errores[] = "El archivo se subió parcialmente.";
+                break;
+    
+            case UPLOAD_ERR_NO_FILE:
+                $errores[] = "Debe seleccionar un archivo.";
+                break;
+    
+            case UPLOAD_ERR_NO_TMP_DIR:
+                $errores[] = "Falta la carpeta temporal.";
+                break;
+    
+            case UPLOAD_ERR_CANT_WRITE:
+                $errores[] = "No se pudo escribir el archivo en el disco.";
+                break;
+    
+            case UPLOAD_ERR_EXTENSION:
+                $errores[] = "Una extensión de PHP detuvo la subida del archivo.";
+                break;
+    
+            default:
+                $errores[] = "Error desconocido al subir el archivo.";
+                break;
+        }
+    
+        if (empty($errores)) {
+            $nombreArchivoDestino = "imagenes_perfil/" . $nombreUsuario . "_perfil.png";
+            if (!move_uploaded_file($imagen["tmp_name"], $nombreArchivoDestino)) {
+                $errores[] = "Error al mover el archivo.";
+            }
+        }
+    
+        
+        if (!empty($errores)) {
+            $imagen["name"] = "default.png";
+        }
+        
+
+        return $imagen;
+        include_once "vistas/login.php";
+    }
