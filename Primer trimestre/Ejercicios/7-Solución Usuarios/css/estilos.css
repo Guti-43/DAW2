@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+}
+
+h1,
+h2 {
+    margin-bottom: 1vh;
+}
+
+form {
+    background-color: #fff;
+    padding: 2vh;
+    border-radius: 8px;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 60vh;
+    margin: 1vh auto;
+}
+
+fieldset {
+    padding: 5px;
+    margin: 0 0 20px 0;
+}
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    width: 98%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 1.3vh;
+}
+
+button {
+    width: 98%;
+    padding: 7px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    color: red;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 130px;
+    border-radius: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    background-color: #fff;
+    padding: 1vh;
+    border-radius: 8px;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 60vh;
+    margin: 1vh auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+td {
+    padding: 1vh;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    font-size: 1.4vh;
+    font-weight: bold;
+}
