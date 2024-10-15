@@ -1,0 +1,93 @@
+body {
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+    position: fixed;
+    top: 0;
+    left: 220px;
+    width: calc(100% - 220px);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+li a:hover {
+    background-color: #666;
+}
+
+.sidebar h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-top: 2px solid #575757;
+    border-bottom: 2px solid #575757;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.sidebar a {
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
