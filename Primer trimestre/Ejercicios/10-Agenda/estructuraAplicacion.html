@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+/agenda-mvc/
+│
+├── /assets/
+│ ├── /images/
+│ │ ├── icono.png // Imagen por defecto para los contactos sin imagen.
+│ │ └── ... // Otras imágenes subidas para maquetar la página.
+│ └── /css/
+│ └── style.css // Archivos de estilos CSS.
+│
+├── /controllers/ // Controladores que gestionan la lógica de la aplicación.
+│ ├── AgendaController.php // Controlador principal de la agenda.
+│ └── SessionController.php // Controlador para gestionar la sesión.
+│
+├── /models/ // Modelos que interactúan con los datos de la agenda.
+│ ├── Contacto.php // Clase para manejar los contactos (nombre, teléfono, imagen).
+│ └── Agenda.php // Clase para manejar la colección de contactos.
+│
+├── /views/ // Vistas para presentar los datos al usuario.
+│ ├── header.php // Encabezado con el menú de la aplicación.
+│ ├── agenda.php // Vista que muestra la agenda completa.
+│ ├── insertar.php // Vista para añadir contactos.
+│ ├── buscar.php // Vista para buscar contactos por nombre.
+│ ├── footer.php // Pie de página información adicional.
+│ ├── eliminar.php // Vista para eliminar contacto.
+│ └── modificar.php // Vista para modificar contacto.
+│
+├── /uploads/ // Carpeta donde se guardan las imágenes subidas.
+│ └── ... // Imágenes subidas por los usuarios con nombre del contacto.
+│
+├── index.php // Punto de entrada principal para la aplicación.
+
+
+    </pre>
+</body>
+
+</html>
