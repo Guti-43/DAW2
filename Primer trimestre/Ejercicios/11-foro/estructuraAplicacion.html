@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Foro</title>
+</head>
+
+<body>
+    <pre>
+    Aplicación Foro de Discusión Interno
+    │
+    ├── models
+    │ ├── Usuario.php // Clase para gestionar usuarios
+    │ ├── Tema.php // Clase para gestionar temas
+    │ ├── Comentario.php // Clase para gestionar comentarios
+    │ └── Voto.php // Clase para gestionar votos en temas y comentarios
+    │
+    ├── controllers
+    │ ├── MainController.php // Controlador central para enrutar peticiones
+    │ ├── SessionController.php // Controlador para gestionar sesiones y usuarios 
+    │ ├── TemaController.php // Controlador para gestionar temas
+    │ ├── ComentarioController.php // Controlador para gestionar comentarios
+    │ └── VotoController.php // Controlador para gestionar los votos
+    │
+    ├── views
+    │ ├── vheader.php // Encabezado de las vistas
+    │ ├── vfooter.php // Pie de página de las vistas
+    │ ├── vlogin.php // Vista para el formulario de login
+    │ ├── temas/vlista.php // Vista para mostrar la lista de temas
+    │ ├── temas/vdetalle.php // Vista para mostrar el detalle de un tema
+    │ ├── vcomentarios // Vista para agregar comentarios a un tema
+    │ └── vvotos // Vista para votar en un tema o comentario
+    │
+    └── index.php
+    </pre>
+</body>
+
+</html>
