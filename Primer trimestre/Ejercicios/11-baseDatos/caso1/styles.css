@@ -1,0 +1,58 @@
+.errorExit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid red;
+    padding: 10px;
+    background-color: #fdd;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: 10vh auto;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.errorExit a {
+    color: rgb(21, 170, 21);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.errorExit a:hover {
+    color: rgb(121, 187, 15);
+    text-decoration: none;
+}
+
+table {
+    border: 2px solid rgb(8, 72, 109);
+    width: 60%;
+    margin: 5vh auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: rgb(16, 4, 73);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5vh auto;
+    line-height: 1.5;
+}
+
+th,
+td {
+    border: 1px solid rgb(8, 72, 109);
+    padding: 10px;
+    width: 30%;
+}
+
+th {
+    background-color: rgb(42, 42, 44);
+    color: white;
+}

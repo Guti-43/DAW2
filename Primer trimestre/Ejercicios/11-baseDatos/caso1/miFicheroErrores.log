@@ -1,0 +1,61 @@
+Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for localhosts failed: Host desconocido. 
+Trace:
+ Array
+(
+    [0] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\baseDeDatos\ejemploClase\BaseDatos2.php
+            [line] => 27
+            [function] => __construct
+            [class] => PDO
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => mysql:host=localhosts;dbname=probando;port=3306;charset=utf8mb4
+                    [1] => root
+                    [2] => 
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\baseDeDatos\ejemploClase\BaseDatos2.php
+            [line] => 12
+            [function] => conectar
+            [class] => BaseDatos2
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\baseDeDatos\ejemploClase\BaseDatos2.php
+            [line] => 18
+            [function] => __construct
+            [class] => BaseDatos2
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\baseDeDatos\ejemploClase\llamarClase2.php
+            [line] => 16
+            [function] => obtenerInstancia
+            [class] => BaseDatos2
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+)
+
