@@ -6,7 +6,8 @@ CREATE TABLE Usuarios (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre_usuario VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) NOT NULL,
-    contrasena VARCHAR(50) NOT NULL
+    contrasena VARCHAR(50) NOT NULL,
+    foto VARCHAR(250)
 );
 -- Tabla de Recetas
 CREATE TABLE Recetas (
@@ -18,6 +19,13 @@ CREATE TABLE Recetas (
     dificultad ENUM('Fácil', 'Intermedia', 'Difícil') NOT NULL,
     likes INT DEFAULT 0,
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE ON UPDATE CASCADE
+);
+-- Tabla de ImagenesRecetas
+CREATE TABLE ImagenesRecetas (
+    id_imagen INT AUTO_INCREMENT PRIMARY KEY,
+    id_receta INT NOT NULL,
+    nombre_imagen VARCHAR(255) NOT NULL,
+    FOREIGN KEY (id_receta) REFERENCES Recetas(id_receta) ON DELETE CASCADE ON UPDATE CASCADE
 );
 -- Tabla de LikesRecetas
 CREATE TABLE LikesRecetas (
