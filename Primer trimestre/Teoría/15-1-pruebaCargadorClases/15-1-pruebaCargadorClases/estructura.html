@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de una aplicación web</title>
+</head>
+
+<body>
+    <pre>
+/proyecto
+├── app/
+│   ├── controller/         # Controladores de la aplicación
+│   │   ├── FrontalController.php
+│   │   ├── UsuarioController.php
+│   │   └── OtrosController.php
+│   ├── model/               # Modelos de la aplicación (con lógica de negocios)
+│   │   ├── BaseDatos.php    # Clase general para la conexión a la base de datos
+│   │   ├── Usuario.php
+│   │   └── OtrosModelos.php
+│   ├── view/                 # Vistas de la aplicación
+│   │   ├── producto_view.php
+│   │   ├── usuario_view.php
+│   │   └── otros_view.php
+│   └── bd/               # Carpeta para archivos SQL 
+│       ├── crear_base_de_datos.sql  # Instrucciones para crear la base de datos
+│       ├── tablas.sql               # Instrucciones para crear las tablas
+│       ├── datos_iniciales.sql      # Insertar datos iniciales
+│       
+├── assets/                # Archivos estáticos como CSS, JS, imágenes
+│   ├── css/
+│   │   └── estilo.css
+│   ├── js/
+│   │   └── app.js
+│   └── imagenes/
+│       └── logo.png
+├── uploads/               # Carpeta para los archivos subidos por los usuarios
+│   ├── documentosPDF/
+│   └── img/
+├── config/                # Archivos de configuración general
+│   ├── Config.php         # Configuración general (base de datos, rutas, etc.)
+│   └── miAutoload.php     # Autocargador de clases propio
+├── index.php              # Archivo principal que inicia la aplicación
+└── vendor/                # Dependencias de Composer (si se usa Composer)
+    ├── autoload.php       # Archivo de carga de Composer
+
+    </pre>
+</body>
+
+</html>
