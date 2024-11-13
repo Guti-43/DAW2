@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'Simpsonfont';
+    src: url('simpsonfont.ttf') format('truetype');
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    background-color: #ffcccb;
+    color: #333;
+    padding: 8px 20px;
+    text-align: center;
+}
+
+header {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+header .logo img {
+    max-width: 6vh;
+    height: auto;
+}
+
+.usuario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icono-usuario {
+    width: auto;
+    height: 7vh;
+    object-fit: cover;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+
+.usuario-container span {
+    /* font-weight: bold; */
+    color: #333;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+.peluqueria-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.peluqueria-container h1 {
+    flex: 1;
+    margin: 0;
+    color: #ff6347;
+    text-align: left;
+    font-family: 'Simpsonfont', sans-serif;
+    font-size: 4rem;
+}
+
+.peluqueria-container img {
+    flex: 3;
+    max-width: auto;
+
+    max-height: 60.1vh;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.map-container {
+    width: 100%;
+    max-height: 18vh;
+    margin-bottom: 25px;
+}
+
+.map-container img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    header,
+    footer {
+        padding: 10px;
+    }
+
+    .login-container {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Estilos para el div de errores */
+.error {
+    color: red;
+    background-color: #fdd;
+    border: 1px solid red;
+    padding: 0.8%;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 100%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* Estilos para la página error BD */
+.errorExit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid red;
+    padding: 10px;
+    background-color: #fdd;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: 10vh auto;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.errorExit a {
+    color: rgb(21, 170, 21);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.errorExit a:hover {
+    color: rgb(121, 187, 15);
+    text-decoration: none;
+}
+
+/* Contenedor principal */
+.login-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    /* Aseguramos que el padding se incluye en el tamaño total */
+}
+
+.login-container:hover {
+    transform: translateY(-10px);
+}
+
+/* Título */
+.login-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos de los grupos de formulario */
+.login-container .form-group {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.login-container label {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Campos de texto */
+.login-container input {
+    width: 100%;
+    /* Asegura que los inputs se ajusten al contenedor */
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    /* Asegura que el padding no sobresalga del contenedor */
+}
+
+.login-container input:focus {
+    border-color: #ff6347;
+    outline: none;
+}
+
+/* Botón de envío */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #e5533c;
+}
+
+/* Mensajes de error */
+.error {
+    color: #ff6347;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para la tabla de citas */
+.calendario-container {
+    overflow-x: auto;
+    margin: 5vh 20px;
+}
+
+.calendario {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.calendario th,
+.calendario td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendario th {
+    background-color: #ffcccb;
+    color: #333;
+    font-weight: bold;
+}
+
+.calendario td {
+    background-color: #fff;
+}
+
+.calendario tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
