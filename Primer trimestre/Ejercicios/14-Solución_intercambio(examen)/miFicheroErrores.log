@@ -1,0 +1,125 @@
+===================================================================================================
+
+Error: SQLSTATE[HY000] [1049] Unknown database 'intercambio22'
+
+Fichero: C:\xampp\htdocs\xClase\asd\intercambio\app\model\Usuario.php
+
+Linea: 34
+
+===================================================================================================
+
+Trace:
+
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\app\model\Usuario.php
+            [line] => 34
+            [function] => __construct
+            [class] => PDO
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => mysql:host=localhost;dbname=intercambio22;port=3306;charset=utf8mb4
+                    [1] => root
+                    [2] => 
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\app\model\Usuario.php
+            [line] => 19
+            [function] => conectar
+            [class] => Usuario
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\app\model\Usuario.php
+            [line] => 25
+            [function] => __construct
+            [class] => Usuario
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\app\model\Usuario.php
+            [line] => 62
+            [function] => obtenerInstancia
+            [class] => Usuario
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\app\controller\SessionController.php
+            [line] => 33
+            [function] => validarCredenciales
+            [class] => Usuario
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => CarlosGomez
+                    [1] => c123
+                )
+
+        )
+
+    [5] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\app\controller\FrontController.php
+            [line] => 48
+            [function] => login
+            [class] => SessionController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [6] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\app\controller\FrontController.php
+            [line] => 15
+            [function] => cargarControlador
+            [class] => FrontController
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => session
+                )
+
+        )
+
+    [7] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\intercambio\index.php
+            [line] => 7
+            [function] => manejarPeticion
+            [class] => FrontController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
