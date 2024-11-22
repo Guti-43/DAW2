@@ -1,0 +1,527 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #b8c6db, #f5f7fa);
+    color: #333;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #145a32;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0px 0px 8px rgba(42, 204, 83, 0.4);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0px 0px 12px rgba(68, 228, 134, 0.5),
+        0px 0px 18px rgba(46, 204, 113, 0.3);
+}
+
+/* Estilos del menú de navegación */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #f0f4f5;
+    color: #145a32;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #d4dadc;
+}
+
+
+/* Estilos del footer */
+footer {
+    background-color: #145a32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el div de errores */
+.error {
+    color: red;
+    background-color: #fdd;
+    border: 1px solid red;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error2 {
+    color: red;
+    background-color: #fdd;
+    border: 1px solid red;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 60%;
+}
+
+/* Estilos para la página error BD */
+.errorExit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid red;
+    padding: 10px;
+    background-color: #fdd;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: 10vh auto;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.errorExit a {
+    color: rgb(21, 170, 21);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.errorExit a:hover {
+    color: rgb(121, 187, 15);
+    text-decoration: none;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.container img {
+    width: 700px;
+    height: auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+    color: #2e4053;
+    font-size: 2.4em;
+    margin-top: 12px;
+}
+
+.container p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+/* Contenedor principal */
+.container-articulos {
+    text-align: center;
+    padding: 20px 50px 10px 50px;
+    background-color: #f9f9f9;
+    min-height: 71vh;
+}
+
+.container-articulos h1 {
+    color: #2e4053;
+    padding: 0px 50px;
+    font-size: 2.2em;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Contenedor de artículos */
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1220px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Estilo individual de un artículo */
+.article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    height: 53vh;
+    overflow: hidden;
+}
+
+.article figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.article img {
+    width: 100%;
+    height: 100%;
+    max-height: 335px;
+    min-height: 335px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    box-shadow:
+        0 -10px 20px rgba(0, 0, 0, 0.3),
+        0 6px 15px rgba(0, 0, 0, 0.4),
+        -6px -4px 20px rgba(0, 0, 0, 0.2),
+        6px -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.article figcaption {
+    font-size: 1.3em;
+    color: #145a32;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 7vh;
+}
+
+/* Contenedor general */
+.editable-fields {
+    display: flex;
+    gap: 40px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e6ffe6, #c2f0c2);
+    padding: 15px;
+    margin-bottom: 0vh;
+    border: 2px solid #8fd98f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+}
+
+.editable-fields div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Etiquetas */
+.label {
+    font-weight: bold;
+    color: #006400;
+    margin-right: 4px;
+    margin-top: 4%;
+}
+
+/* Estilo general para los datos */
+.dato {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Específico para el precio */
+.precio {
+    background: linear-gradient(135deg, #28a745, #45c957);
+    border: 1px solid #1e7e34;
+    box-shadow: 0 2px 4px rgba(0, 128, 0, 0.3);
+}
+
+/* Específico para la cantidad */
+.cantidad {
+    background: linear-gradient(135deg, #007bff, #68a9ff);
+    border: 1px solid #0056b3;
+    box-shadow: 0 2px 4px rgba(0, 0, 128, 0.3);
+}
+
+
+/* paginación contenedor */
+
+.paginacion-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.paginacion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton {
+    padding: 6px 11px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 3px;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.boton.disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.paginacion-info {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Estilos para la paginación con todos los elementos */
+.pagina-actual {
+    padding: 6px 11px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid #007bff;
+}
+
+.numero-pagina {
+    padding: 6px 11px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #c2b9b9;
+    border-radius: 3px;
+}
+
+.numero-pagina:hover {
+    background-color: orangered;
+    color: white;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+
+    .container-articulos.vista-ancha,
+    .container-articulos.vista-editable,
+    .articles-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .container-articulos h1 {
+        font-size: 1.8em;
+    }
+
+    /* Para pantallas pequeñas */
+    @media (max-width: 600px) {
+        .paginacion-container {
+            margin: 15px 0;
+        }
+
+        .paginacion {
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .boton,
+        .pagina-actual,
+        .numero-pagina {
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+
+        .paginacion-info {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    }
+
+    /* Para pantallas medianas */
+    @media (min-width: 601px) and (max-width: 1024px) {
+        .paginacion-container {
+            margin: 18px 0;
+        }
+
+        .paginacion {
+            gap: 8px;
+        }
+
+        .boton,
+        .pagina-actual,
+        .numero-pagina {
+            padding: 5px 10px;
+            font-size: 15px;
+        }
+
+        .paginacion-info {
+            font-size: 15px;
+
+        }
+
+        .article figcaption {
+            font-size: 0.9em;
+        }
+
+        .label {
+            font-size: 0.95em;
+        }
+
+        .dato {
+            font-size: 0.9em;
+            padding: 4px 8px;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .editable-fields {
+            flex-direction: column;
+            gap: 15px;
+            padding: 8px;
+            box-shadow: 0 2px 4px rgba(0, 128, 0, 0.15);
+        }
+
+        .article img {
+            max-height: 210px;
+            min-height: 210px;
+            border-radius: 5px;
+        }
+
+        .article figcaption {
+            font-size: 0.9em;
+        }
+
+        .label {
+            font-size: 0.95em;
+        }
+
+        .dato {
+            font-size: 0.9em;
+            padding: 4px 8px;
+            width: 100%;
+        }
+    }
+
+    /* Para pantallas muy pequeñas (menos de 480px) */
+    @media (max-width: 480px) {
+        .editable-fields {
+            padding: 5px;
+            gap: 10px;
+        }
+
+        .editable-fields div {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .article img {
+            max-height: 150px;
+            min-height: 150px;
+        }
+
+        .label {
+            font-size: 0.8em;
+        }
+
+        .dato {
+            font-size: 0.8em;
+            padding: 3px 6px;
+            width: 100%;
+        }
+    }
+}

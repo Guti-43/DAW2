@@ -1,0 +1,96 @@
+====================================================================================================
+
+Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ultramarinos.articulos' doesn't exist
+
+Fichero: C:\xampp\htdocs\xClase\asd\ultramarinos\app\model\Articulo.php
+
+Linea: 42
+
+====================================================================================================
+
+Trace:
+
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\ultramarinos\app\model\Articulo.php
+            [line] => 42
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\ultramarinos\app\controller\ArticuloController.php
+            [line] => 19
+            [function] => obtenerTodosArticulos
+            [class] => Articulo
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\ultramarinos\app\controller\ArticuloController.php
+            [line] => 10
+            [function] => gestionarArticulos
+            [class] => ArticuloController
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => 
+                )
+
+        )
+
+    [3] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\ultramarinos\app\controller\FrontController.php
+            [line] => 40
+            [function] => index
+            [class] => ArticuloController
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => mostrar
+                )
+
+        )
+
+    [4] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\ultramarinos\app\controller\FrontController.php
+            [line] => 15
+            [function] => cargarControlador
+            [class] => FrontController
+            [type] => ->
+            [args] => Array
+                (
+                    [0] => articulo
+                )
+
+        )
+
+    [5] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\ultramarinos\index.php
+            [line] => 9
+            [function] => manejarPeticion
+            [class] => FrontController
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+)
