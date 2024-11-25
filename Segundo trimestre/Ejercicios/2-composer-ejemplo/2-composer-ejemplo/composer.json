@@ -1,0 +1,9 @@
+{
+    "name": "usuario/composer-ejemplo",
+    "description": "Un proyecto PHP con PHPMailer y Dompdf.",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "dompdf/dompdf": "^2.0"
+    }
+}
