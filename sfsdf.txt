@@ -1,0 +1,32 @@
+import md5 from "md5"
+
+const publicKey = "7bba7503e935eb742eba716e2ede8f84"
+const privateKey = "795c24ccb99e42e1c0b9c1558da55bef8046b27e"
+const url="https://gateway.marvel.com/v1/public/"
+
+
+
+const getHeroeByName = (nombre) => {
+    const ts=1
+    const hash=md5(ts+privateKey+publicKey)
+
+    const urlMatch=`${url}characters?name=${nombre}&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+    console.log(urlMatch);
+
+    fetch(urlMatch)
+    .then(response=>response.json())
+    .then(respuesta=>{
+        console.log(`El heroe es:`)
+        console.log(respuesta.data.results)
+    })
+}
+const getHeroeById = (id) => {
+    console.log(`El heroe es:${id}`)
+}
+
+
+
+export {
+    getHeroeById,
+    getHeroeByName
+}
