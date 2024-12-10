@@ -1,0 +1,31 @@
+{
+    "titulo": "Esto es un artículo",
+    "visitas": 345,
+    "publicado": true,
+    "categoria": null,
+    "precio": 7.4,
+    "etiquetas": [
+        "PHP",
+        "JSON",
+        "Programación"
+    ],
+    "comentarios": [
+        {
+            "autor": "Luisa López",
+            "mensaje": "Muy buen artículo"
+        },
+        {
+            "autor": "Carlos Pérez",
+            "mensaje": "Artículo muy malo"
+        }
+    ],
+    "configuracion": {
+        "version": 1.0,
+        "modo": "producción",
+        "idiomas": [
+            "es",
+            "en",
+            "fr"
+        ]
+    }
+}
