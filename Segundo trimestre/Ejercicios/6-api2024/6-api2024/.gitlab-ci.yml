@@ -1,0 +1,16 @@
+stages:
+  - deploy
+
+deploy-job:
+  stage: deploy
+
+  environment: production
+
+  script:
+    - echo "Desplegando la aplicación..."
+
+    - lftp -c "open $FTP_SERVER; user $FTP_USERNAME $FTP_PASSWORD; mkdir -p $CI_PROJECT_NAME; mirror --ignore-time -Rev --parallel=10 --include ./*** --exclude README.md --exclude .gitlab-ci.yml --exclude .git/ --exclude Readme-Imagenes/ ./ ./$CI_PROJECT_NAME; bye"
+
+    - echo "Aplicación exitosamente desplegada."
+
+    - echo "Disponible en http://${FTP_SERVER}:8080/${FTP_USERNAME}/${CI_PROJECT_NAME}."
