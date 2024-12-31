@@ -5,7 +5,6 @@ import { Footer } from "./components/Footer.jsx";
 
 function App() {
   const [nombre, setNombre] = useState()
-
   return (
     <>
       <Header/>
