@@ -1,0 +1,183 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+.container {
+    margin: 10px;
+    border: 1px solid #D0D0D0;
+    box-shadow: 0 0 8px #D0D0D0;
+
+}
+
+h1 {
+    color: rgb(34, 33, 33);
+    background-color: transparent;
+    border-bottom: 1px solid #D0D0D0;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 14px 0;
+    padding: 14px 15px 10px 15px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.3em;
+    font-weight: bold;
+}
+
+h3 {
+    display: inline-block;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.divbody {
+    padding: 1em;
+    margin: 0 15px 0 15px;
+}
+
+p.divfooter {
+    text-align: right;
+    font-size: 16px;
+    border-top: 1px solid #D0D0D0;
+    line-height: 32px;
+    padding: 0 10px 0 10px;
+    margin: 20px 0 0 0;
+}
+
+span.v {
+    color: rgb(29, 207, 29);
+}
+
+span.r {
+    color: #89b603;
+}
+
+span.a {
+    color: #e100e1;
+}
+
+span.n {
+    color: #ffa500;
+}
+
+span.b {
+    color: #cfb315;
+}
+
+i {
+    color: #a51847;
+}
+
+code {
+    font-family: Consolas, Monaco, Courier New, Courier, monospace;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D0D0;
+    color: #002166;
+    display: block;
+    margin: 14px 0 14px 0;
+    padding: 12px 10px 12px 30px;
+}
+
+
+.divbody {
+    padding: 0.5em;
+    margin: 0 10px 0 10px;
+}
+
+.api-endpoint {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.api-endpoint code {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.api-endpoint p {
+    margin-left: 15px;
+    color: #777;
+}
+
+.json {
+    background-color: #282c34;
+    color: #c3c8d3;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+
+
+.json-key {
+    color: #e06c75;
+}
+
+.json-brace {
+    color: #e7c712;
+}
+
+.json-bracket {
+    color: #61afef;
+    /* Azul más claro para las llaves y corchetes */
+}
+
+
+
+summary {
+    cursor: pointer;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+
+
+/* Estilos para la página error BD */
+.errorExit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid red;
+    padding: 10px;
+    background-color: #fdd;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: 10vh auto;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.errorExit a {
+    color: rgb(21, 170, 21);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.errorExit a:hover {
+    color: rgb(121, 187, 15);
+    text-decoration: none;
+}

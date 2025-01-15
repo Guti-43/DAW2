@@ -1,0 +1,61 @@
+====================================================================================================
+
+Error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+
+Fichero: C:\xampp\htdocs\xClase\asd\api2024\v1\modelo\AlimentosModelo.php
+
+Linea: 126
+
+====================================================================================================
+
+Trace:
+
+Array
+(
+    [0] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\api2024\v1\modelo\AlimentosModelo.php
+            [line] => 126
+            [function] => execute
+            [class] => PDOStatement
+            [type] => ->
+            [args] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\api2024\v1\controlador\Actualizar.php
+            [line] => 94
+            [function] => actualizarRegistro
+            [class] => AlimentosModelo
+            [type] => ::
+            [args] => Array
+                (
+                    [0] => 9
+                    [1] => Array
+                        (
+                            [nombre] => Actualizado
+                            [energia] => 120
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [file] => C:\xampp\htdocs\xClase\asd\api2024\v1\alimentos.php
+            [line] => 47
+            [function] => gestion
+            [class] => Actualizar
+            [type] => ::
+            [args] => Array
+                (
+                )
+
+        )
+
+)
